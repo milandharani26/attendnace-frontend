@@ -1,0 +1,45 @@
+@use './colors';
+@use './font';
+
+
+
+.w-100{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-evenly{ 
+   justify-content: space-evenly;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+
+// align
+.align-center{
+    align-items: center;
+}
+.align-baseline{
+    align-items: baseline;
+}
+.align-end{
+    align-items:end;
+}
+.align-start{
+    align-items: start;
+}
+.align-baseline{
+    align-items: baseline;
+}
+

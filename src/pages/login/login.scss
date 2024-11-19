@@ -1,0 +1,113 @@
+// // Importing Roboto font in SCSS is unnecessary as it's already included in HTML
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+// // Styles for the login page
+// .login-page {
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #f3f4f6; 
+// }
+
+// .login-card {
+//   width: 400px; 
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+//   border-radius: 8px; 
+//   background: linear-gradient(to bottom right, #a0d7f7, #e1f7ff);
+//   padding: 30px; 
+
+//   .MuiCardHeader-root {
+//     text-align: center;
+//   }
+// }
+
+// // Font styling
+// .card-title {
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 700;
+// }
+
+// .card-subtitle {
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 400; 
+// }
+
+// .form-input {
+//   margin-bottom: 16px;
+// }
+
+// .submit-button {
+//   margin-top: 16px;
+//   background-color: #3f51b5; 
+// }
+
+// .login-card-footer {
+//   justify-content: center;
+//   margin-top: 16px; 
+// }
+
+// .footer-text {
+//   font-family: 'Roboto', sans-serif;
+// }
+
+
+// .sign-up-button {
+//   text-transform: underline; 
+// }
+
+
+
+.login-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-left{
+        width: 50%;
+        background-color: black;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: white;
+        justify-content: center;
+    }
+
+
+    .login-right{
+        width: 50%;
+        // background-color: greenyellow;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        flex-direction: column;
+        border-left: 1px solid black;
+        gap: 50px;
+        font-family: "Roboto", sans-serif;
+
+        .login-right-upper-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        
+        .login-input-fields{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
+
+
+

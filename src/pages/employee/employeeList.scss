@@ -1,0 +1,38 @@
+@use "../../styles/colors";
+
+.employeeList-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .employeeList-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    // background-color: #b5bec673;
+    background-color: colors.$light-background;
+    border-radius: 12px;
+  }
+
+  .employeeList-table-wrapper {
+    padding: 20px;
+    background-color: colors.$light-background;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h5 {
+      font-weight: 500;
+    }
+  }
+}
+
+// .test-div {
+//   display: grid;
+//   //   gap: 200px;
+//   column-gap: 50px;
+//   row-gap: 50px;
+//   grid-template-columns: repeat(auto-fill, 1 minmax(100px, 3fr) 1);
+// }

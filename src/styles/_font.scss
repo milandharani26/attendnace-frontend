@@ -1,0 +1,312 @@
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+$input-entered-value-text: 14px;
+
+// sm screen
+$fs-login-welcome-sm: 24px;
+$fs-login-description-sm: 14px;
+$fs-login-placeholder-sm: 14px;
+$fs-login-button-sm: 16px;
+$fs-login-forgot-sm: 14px;
+$fs-error-sm: 16px;
+$fs-button-sm: 14px;
+$fs-form-heading-sm: 16px;
+$fs-summary-sm: 18px;
+$fs-table-heading-sm: 18px;
+$fs-table-description-sm: 16px;
+$fs-table-column-sm: 16px;
+$fs-table-cell-sm: 16px;
+$fs-sidebar-sm: 16px;
+$fs-header-sm: 16px;
+$fs-breadcrum-sm: 14px;
+$fs-normal-sm: 16px;
+$fs-no-data-text-sm: 16px;
+$fs-no-data-button-sm: 20px;
+$fs-filter-label-sm: 12px;
+$fs-breadcrumb-sm: 14px;
+$fs-select-dropdown-sm: 14px;
+$fs-navbar-sm: 14px;
+$fs-popup-text-sm: 14px;
+$popup-text-header: 10px;
+
+$fs-md-popup-text-sm: 12px;
+$fs-md-popup-text-sm: 11px;
+
+// medium screen
+$fs-login-welcome-md: 30px;
+$fs-login-description-md: 14px;
+$fs-login-placeholder-md: 14px;
+$fs-login-button-md: 16px;
+$fs-login-forgot-md: 14px;
+$fs-error-md: 16px;
+$fs-button-md: 14px;
+$fs-form-heading-md: 16px;
+$fs-summary-md: 18px;
+$fs-table-heading-md: 18px;
+$fs-table-description-md: 16px;
+$fs-table-column-md: 16px;
+$fs-table-cell-md: 16px;
+$fs-sidebar-md: 16px;
+$fs-sidebar-normal: 14px;
+$fs-header-md: 16px;
+$fs-breadcrum-md: 14px;
+$fs-normal-md: 16px;
+$fs-no-data-text-md: 20px;
+$fs-no-data-button-md: 20px;
+$fs-filter-label-md: 12px;
+$fs-breadcrumb-md: 14px;
+$fs-select-dropdown-md: 14px;
+
+$fs-profile-avtar-md: 20px;
+$fs-profile-avtar-md-title: 12px;
+
+// extra large screen
+$fs-login-welcome-xl: 42px;
+$fs-login-description-xl: 16px;
+$fs-login-placeholder-xl: 16px;
+$fs-login-button-xl: 20px;
+$fs-login-forgot-xl: 16px;
+$fs-error-xl: 16px;
+$fs-button-xl: 14px;
+$fs-form-heading-xl: 16px;
+$fs-summary-xl: 18px;
+$fs-table-heading-xl: 18px;
+$fs-table-description-xl: 16px;
+$fs-table-column-xl: 16px;
+$fs-table-cell-xl: 16px;
+$fs-sidebar-xl: 16px;
+$fs-header-xl: 20px;
+$fs-breadcrum-xl: 14px;
+$fs-normal-xl: 16px;
+$fs-no-data-xl: 32px;
+$fs-no-data-text-xl: 32px;
+$fs-no-data-button-xl: 20px;
+$fs-filter-label-xl: 12px;
+$fs-breadcrumb-xl: 14px;
+$fs-select-dropdown-xl: 14px;
+
+$fs-table-main-head: 30px;
+$fs-table-th: 14px;
+$fs-table-td: 14px;
+$fs-table-pagetext: 13px;
+
+$fs-main-page-head: 34px;
+$fs-main-page-inner-route: 13px;
+$fs-sm-main-page-inner-route: 10px;
+
+$fs-btn-text: 14px;
+$fs-btn-curve: 5px;
+$fs-label-curve: 2px;
+$fs-timetable-month: 13px;
+$fs-timetable-date: 24px;
+$fs-timetable-day: 10px;
+$fs-timetable-calendar: 14px;
+$fs-timetable-btn-text: 14px;
+$fs-timetable-drawer-title: 34px;
+$fs-timetable-input: 14px;
+$fs-timetable-sub-input: 12px;
+$fs-timetable-drawer-calendar: 13px;
+$fs-timetable-drawer-option: 13px;
+$fs-timetable-card-title: 12px;
+$fs-timetable-card-title-white: 10px;
+$fs-timetable-weekly: 14px;
+$fs-timetable-weekly-date: 18px;
+$fs-timetable-weekly-month: 13px;
+$fs-timetable-weekly-sub-date: 18px;
+$fs-timetable-weekly-weekday: 10px;
+
+$fs-add-course-subHeading: 13px;
+$fs-tab-heading: 16px;
+$fs-md-timetable-card-title: 10px;
+$fs-md-timetable-month: 10px;
+$fs-md-timetable-date: 18px;
+$fs-md-timetable-day: 8px;
+$fs-md-timetable-card-title: 9px;
+$fs-md-timetable-month: 10px;
+$fs-md-timetable-date: 18px;
+$fs-md-timetable-day: 8px;
+$fs-md-btn-text: 12px;
+$fs-md-timetable-input: 11px;
+$fs-md-timetable-card-title-white: 8px;
+$fs-md-timetable-card-title: 10px;
+$fs-md-timetable-btn-text: 12px;
+$fs-md-table-main-head: 23px;
+$fs-md-timetable-drawer-title: 26px;
+$fs-md-timetable-drawer-option: 10px;
+
+//form
+$fs-form-heading: 34px;
+$fs-form-breadCrumb: 13px;
+$fs-form-btn: 13px;
+$fs-form-errorMsg: 13px;
+$fs-form-description: 13px;
+$fs-form-input-label: 14px;
+// $fs-form-input-placeholder: 14px;
+$fs-form-input-placeholder: 13px;
+$fs-form-timetable-radio-label: 12px;
+$fs-table-bill-amt: 24px;
+
+$fs-md-form-input-placeholder: 10px;
+$fs-md-form-input-label: 11px;
+$fs-md-form-description: 11px;
+$fs-md-form-errorMsg: 10px;
+$fs-md-table-bill-amt: 24px;
+$fs-md-form-heading: 26px;
+$fs-md-form-breadCrumb: 11px;
+$fs-md-form-heading: 26px;
+$fs-md-form-btn: 10px;
+
+//Exam Assessment
+$exam-assessment-result-header: 30px;
+$exam-assessment-header: 34px;
+$exam-assessment-header-totalmark: 30px;
+$exam-assessment-header-child: 13px;
+$exam-assessment-Question-number: 20px;
+$exam-assessment-Question-div: 24px;
+$exam-total-marks-div: 24px;
+$exam-mcq-div: 12px;
+$exam-module-accounting-exam-div-batch: 13px;
+$exam-course: 13px;
+$exam-mini-div-font: 12px;
+
+$exam-assessment-result-header: 30px;
+$exam-assessment-header: 34px;
+$exam-assessment-header-totalmark: 30px;
+$exam-assessment-header-child: 13px;
+$exam-assessment-Question-number: 30px;
+$exam-assessment-Question-div: 28px;
+$tab-exam-assessment-Question-div: 20px;
+$exam-total-marks-div: 24px;
+$exam-mcq-div: 12px;
+$exam-module-accounting-exam-div-batch: 13px;
+$exam-course: 13px;
+$exam-mini-div-font: 12px;
+
+$exam-timer: 24px;
+$practice-exam-question-header: 30px;
+$exam-deadline-footer: 13px;
+
+$exam-result-show-entries: 13px;
+
+$fs-table-bill-amt: 24px;
+
+$exam-md-assessment-Question-number: 23px;
+$exam-md-assessment-Question-div: 18px;
+
+//calender schedule
+$schedule-time: 13px;
+$lecture-type: 13px;
+$module-name: 16px;
+$course-name: 12px;
+$attendance-btn: 14px;
+$fees-installment-label: 16px;
+$fees-installment-heading: 24px;
+
+$md-lecture-type: 10px;
+$md-module-name: 12px;
+$md-attendance-btn: 10px;
+$common-tabs-md: 11px;
+$fees-md-installment-heading: 18px;
+$fees-md-installment-label: 12px;
+
+$fees-sm-installment-heading: 14px;
+
+//common tabs
+$tabs-md: 14px;
+
+//student dashboard
+//course card
+$course-card-tag: 12px;
+$course-card-status: 12px;
+$course-card-title: 14px;
+$course-card-details: 13px;
+
+$course-md-card-details: 11px;
+$course-md-card-status: 9px;
+$course-md-card-details: 10px;
+
+//course-list
+$course-list-title: 18px;
+$course-md-list-title: 13px;
+
+//faculty dashboard
+$faculty-payment-history-details: 13px;
+
+$faculty-md-payment-history-details: 10px;
+
+// Student
+$student-profile-header: 30px;
+$student-profile-header-introduction: 20px;
+$student-table-header: 15px;
+$student-table-data: 18px;
+$student-dob-label: 14px;
+$student-sub-title: 13px;
+$student-mcq-badge: 10px;
+$student-fees-title: 20px;
+$student-branch-fees: 13px;
+$student-branch-fees-record: 14px;
+
+$student-md-profile-header: 23px;
+$student-md-profile-header-introduction: 15px;
+$student-md-table-header: 12px;
+$student-md-table-data: 14px;
+$student-md-dob-label: 11px;
+$student-md-sub-title: 10px;
+$student-md-mcq-badge: 8px;
+$student-md-fees-title: 15px;
+$student-md-branch-fees: 10px;
+
+//select-exam-topics
+$select-exam-topics-header: 34px;
+$select-exam-topics-header-desc: 13px;
+$all-modules-span: 13px;
+$accordion-header: 16px;
+$accordion-detail: 13px;
+$topic: 14px;
+$start-practice-btn: 14px;
+
+$select-md-exam-topics-header: 26px;
+$select-md-exam-topics-header-desc: 10px;
+$accordion-md-header: 12px;
+$accordion-md-detail: 10px;
+$topic-md: 11px;
+$start-md-practice-btn: 10px;
+
+//course detail
+$course-detail-header: 24px;
+$course-payment-amount: 24px;
+$course-payment-date: 13px;
+$course-content-header: 24px;
+$course-accordion: 14px;
+$video-detail: 14px;
+$video-title: 14px;
+$video-warning: 12px;
+$video-play-btn: 14px;
+$pdf-label: 14px;
+$course-attach-file: 14px;
+
+$course-md-detail-header: 18px;
+$course-md-content-header: 18px;
+$course-md-accordion: 12px;
+$md-pdf-label: 12px;
+$start-md-practice-btn: 10px;
+$course-md-payment-amount: 18px;
+$course-md-payment-date: 10px;
+
+$admin-dashboard-card-title: 38px;
+$admin-dashboard-card-sub-title: 14px;
+
+//branch billing history
+$price-font: 12px;
+$date-font: 14px;
+
+$course-tab-heading: 14px;
+$course-checkbox-label: 12px;
+$course-checkbox-tick: 20px;
+$course-pricing-td: 12px;
+
+$course-sm-tab-heading: 11px;
+$course-md-pricing-td: 10px;

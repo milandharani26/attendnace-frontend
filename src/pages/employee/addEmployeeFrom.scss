@@ -1,0 +1,36 @@
+@use '../../styles/colors';
+
+.employeeForm-container-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .employeeForm-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: colors.$light-background;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    .employeeForm-outer-wrapper{
+        background-color: colors.$light-background;
+        border-radius: 12px;
+        padding: 20px;
+        width: 100%;
+
+        .employeeForm-wrapper{
+            display: flex;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr 1fr;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+}

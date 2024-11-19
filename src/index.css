@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  /* font-weight: 100; */
+  font-style: normal;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.black-button {
+  background-color: black;
+  color: white;
+}
+
+.appIcon {
+  width: 100px;
+}
+
+/* .fc-direction-ltr {
+  direction: ltr;
+  text-align: left;
+  scale: 0.8;
+} */
+
+
+@media print {
+  .printable-component {
+    padding: 20mm;
+    transform: scale(0.9);
+    /* transform: scale(0.5); Scale down to 50% */
+    transform-origin: top left;
+    /* width: 400mm; */
+    /* Adjust to match A4 size or your desired size */
+    /* height: 297mm; */
+  }
+}

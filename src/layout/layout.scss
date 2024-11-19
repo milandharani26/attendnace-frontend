@@ -1,0 +1,25 @@
+
+
+.layout-div{
+    display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+
+    .sidebar-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: yellow;
+        height: 100%;
+        width: 15%;
+    }
+
+    .children-div{
+        background-color: blueviolet;
+        width: 100%;
+    }
+}

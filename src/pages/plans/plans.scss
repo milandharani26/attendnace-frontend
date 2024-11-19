@@ -1,0 +1,85 @@
+.subscription-plans {
+  padding: 4rem 2rem;
+
+  .title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .plans-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .plan-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    &.recommended {
+      border: 2px solid #1976d2;
+    }
+
+    .plan-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .plan-name {
+      font-weight: 600;
+    }
+
+    .recommended-badge {
+      background-color: #1976d2;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+    }
+
+    .plan-description {
+      margin-bottom: 1rem;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .plan-price {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+
+      .price-period {
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .feature-list {
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-icon {
+      min-width: 36px;
+      color: #4caf50;
+    }
+
+    .plan-actions {
+      margin-top: auto;
+      padding: 1rem;
+    }
+  }
+}

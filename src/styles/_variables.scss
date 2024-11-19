@@ -1,0 +1,51 @@
+@use './colors';
+
+$button-radius : 5px;
+$input-radius: 5px;
+$table-radius: 20px;
+$form-radius: 20px;
+$summary-box-radius: 10px;
+$no-data-found-radius:10px;
+
+// text colors
+$text-error-color : colors.$red;
+$text-regular-color : colors.$black;
+$text-button-flat-color: colors.$white;
+$text-button-outlined-color : colors.$red;
+
+//font-family
+
+$montserrat-semibold: "Montserrat SemiBold";
+$montserrat-bold: "Montserrat Bold";
+$montserrat-light: "Montserrat Light";
+$montserrat-medium: "Montserrat Medium";
+$montserrat-regular: "Montserrat Regular";
+
+
+
+
+//backhround color
+
+$bg-red: colors.$red;
+$bg-white : colors.$white;
+$form-bg-color: colors.$white;
+
+$button-flat-bg: colors.$red;
+$button-outlined-bg: colors.$white;
+
+$button-flat-border: 1px solid colors.$red;
+
+// input
+
+$input-border-error: 1px solid colors.$red;
+$input-border-normal: 1px solid colors.$light-silver;
+$form-border :  1px solid colors.$red;
+
+$box-shadow-black: rgba(149, 157, 165, 0.2) 0px 0px 25px -5px;
+$box-shadow-red: rgba(238, 78, 68, 0.2) 0px 0px 25px -5px;
+
+$header-box-shadow: 0px 6px 17px 0px colors.$box-shadow-dark;
+$sidebar-box-shadow:0px 4px 11px 0px colors.$box-shadow-dark;
+
+
+

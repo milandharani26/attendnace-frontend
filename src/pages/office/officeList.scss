@@ -1,0 +1,31 @@
+@use '../../styles/colors';
+
+.officeList-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .officeList-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        // background-color: #b5bec673;
+        background-color: colors.$light-background;
+        border-radius: 12px;
+    }
+
+
+    .officeList-table-wrapper{
+        padding: 20px;
+        background-color: colors.$light-background;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h5{
+            font-weight: 500;
+        }
+    }
+}

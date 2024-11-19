@@ -1,0 +1,63 @@
+@use '../../styles/colors';
+@use '../../styles/font';
+@use '../../styles/variables';
+
+
+.first-breadcrumb {
+  font-size: 20px !important;
+  color: colors.$darkblack;
+  margin-bottom: 6px;
+}
+
+.breadcrumb-slash {
+  font-size: font.$fs-main-page-inner-route;
+//   font-size: 20px;
+  color: colors.$light-gray;
+  font-family: variables.$montserrat-medium;
+  margin: 0 3px;
+}
+
+.link-to {
+  text-decoration: none;
+  font-size: font.$fs-main-page-inner-route;
+  color: colors.$light-gray;
+  font-family: variables.$montserrat-medium;
+  
+  .link-breadcrumb {
+    text-decoration: none;
+    font-size: font.$fs-main-page-inner-route;
+    color: colors.$light-gray;
+    // font-family: variables.$montserrat-medium;
+  }
+}
+
+
+@media (max-width:1700px) {
+
+  .first-breadcrumb{
+    font-size: 26px;
+  }
+
+  .link-to{
+    .link-breadcrumb {
+      font-size: 14px !important;
+    }
+  }
+}
+
+
+@media (max-width:992px) {
+  .first-breadcrumb{
+    font-size: 20px;
+  }
+
+  .breadcrumb-slash {
+    font-size: font.$fs-sm-main-page-inner-route;
+  }
+
+  .link-to{
+    .link-breadcrumb {
+      font-size: 10px !important;
+    }
+  }
+}
