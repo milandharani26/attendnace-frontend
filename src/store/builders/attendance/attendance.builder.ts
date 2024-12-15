@@ -12,34 +12,56 @@ const config = {
     method: 'post',
 };
 
+interface getAllAttendance {
+    officeId: string,
+    orgId: string,
+    useRole: string
+}
 
-export const getAllAttendance = createAsyncThunk('attendance/getAttendance', async () => {
+export const getAllAttendance = createAsyncThunk(
+    'attendance/getAttendance',
+    async ({ officeId, orgId, useRole }: getAllAttendance) => {
+        try {
+            // Build query parameters conditionally based on useRole
+            const queryParams: Record<string, string> = {};
+            if (useRole === 'orgadmin' && orgId) {
+                queryParams.org_id = orgId;
+            }
+            if (officeId) {
+                queryParams.office_id = officeId;
+            }
 
-    // const orgId = "1bd2bf21-6a57-457e-854c-5fd5e327459b"
+            // Construct query string
+            const queryString = new URLSearchParams(queryParams).toString();
 
-    try {
-        const response = await apiClient.get(`attendance`);
+            // Make the API call
+            const response = await apiClient.get(`attendance?${queryString}`);
 
-        if (response.status) {
-            toast.success("Success all Attendance", {
-                className: 'custom-toast-success',
-                progressStyle: { background: '#ffffff' },
-            })
+            // Handle success response
+            if (response.status) {
+                toast.success("Successfully fetched all Attendance", {
+                    className: 'custom-toast-success',
+                    progressStyle: { background: '#ffffff' },
+                });
+            }
+
+            // Return the result data
+            return response?.data?.result;
+        } catch (error: any) {
+            // Handle errors
+            const errorMessage = error?.response?.data?.message || 'An error occurred';
+
+            toast.error(errorMessage, {
+                className: 'custom-toast-error',
+                progressStyle: { background: '#C53C43' },
+            });
+
+            // Rethrow the error if needed
+            throw error;
         }
-
-        // const updatedAttendance = response?.data?.result.map((attendance: object) => ({ id: attendance.attendance_id, ...attendance }))
-
-        return response?.data?.result;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
-        const errorMessage = error?.response?.data?.message || 'An error occurred';
-
-        toast.error(errorMessage, {
-            className: 'custom-toast-error',
-            progressStyle: { background: '#C53C43' },
-        });
     }
-})
+);
+
 
 export const getTodayAttendanceCount = createAsyncThunk("attendance/getTodayAttendanceCount", async () => {
     try {

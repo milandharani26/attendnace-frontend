@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { login } from "../../builders/auth/auth.builder";
+import { login, logout } from "../../builders/auth/auth.builder";
 // import { jwtDecode } from "jwt-decode";
 
 const initialState = {
@@ -52,6 +52,18 @@ const authenticationSlice = createSlice({
             .addCase(login.rejected, (state) => {
                 state.loading = false;
                 // state.error = action.error.message as string;
+            })
+
+            .addCase(logout.pending, (state) => {
+                state.loading = true;
+
+            })
+            .addCase(logout.fulfilled, (state) => {
+                state.loading = false;
+
+            })
+            .addCase(logout.rejected, (state) => {
+                state.loading = false;
             })
     }
 })

@@ -6,15 +6,16 @@ import { format } from "date-fns";
 import "./employeeHistory.scss";
 import { Box } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { getAttendanceHistory } from "../../store/builders/attendance/attendance.builder";
 import { formatDateString } from "../../utility/genricFunctions";
 import { useReactToPrint } from 'react-to-print'
 import ButtonCustom from "../../components/button/Button";
+import { useAppDispatch } from "../../store/store";
 
 const AttendanceCalendar = () => {
     const { id } = useParams();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const userAttendanceHistory = useSelector(store => store?.attendance?.attendanceHistory);
 
     const contentRef = useRef()

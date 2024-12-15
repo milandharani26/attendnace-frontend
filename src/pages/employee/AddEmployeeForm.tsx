@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createEmployee, getEmployeeById, updateEmployeeById } from "../../store/builders/employee/employee.builder";
 import { useNavigate, useParams } from "react-router-dom";
 import { formatDateToYYYYMMDD } from "../../utility/genricFunctions";
+import { useAppDispatch } from "../../store/store";
 
 const breadCrumbsArr = [
   {
@@ -32,7 +33,7 @@ const breadCrumbsArr = [
 
 const AddEmployeeForm = () => {
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const navigate = useNavigate()
   const emptableData = useSelector((store) => store?.employee?.formEditId)
   const orgId = useSelector(store => store?.auth?.user?.user?.org_id)

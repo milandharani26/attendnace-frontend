@@ -26,6 +26,7 @@ import CalendarViewMonthIcon from '@mui/icons-material/CalendarViewMonth';
 import { handleSidebar } from '../store/slices/auth/auth.slice';
 import { Button } from '@mui/material';
 import { useAppDispatch } from '../store/store';
+import { logout } from '../store/builders/auth/auth.builder';
 
 const drawerWidth = 240;
 const collapsedDrawerWidth = 60; // Width of the drawer when collapsed
@@ -119,6 +120,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     const useRole = useSelector(store => store?.auth?.user?.userRole?.role_name)
     const sidebarOpen = useSelector(store => store?.auth?.isSidebarOpen)
 
+    console.log(userDetails.user_email, "9999999")
+
+    const userId = userDetails.user_id
+
     const handleDrawerOpen = () => {
         setOpen(true);
         // dispatch(handleSidebar(!sidebarOpen))
@@ -131,6 +136,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
     const handleLogout = () => {
         // navigate("/login")
+
+        dispatch(logout({ userId }))
         removeUserSession(dispatch, navigate);
     }
 

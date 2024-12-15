@@ -6,6 +6,7 @@ import CustomTable from '../../components/table/CustomTable';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllAttendance } from '../../store/builders/attendance/attendance.builder';
+import { useAppDispatch } from '../../store/store';
 
 const breadCrumbsArr = [
   {
@@ -83,8 +84,12 @@ const data = [
 const AttendanceList = () => {
 
   const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const attendanceTableData = useSelector(store => store?.attendance?.attendanceTableData)
+  const orgId = useSelector(store => store?.auth?.user?.user?.org_id)
+  const officeId = useSelector(store => store?.auth?.user?.user?.office_id)
+  const useRole = useSelector(store => store?.auth?.user?.userRole?.role_name)
+  const idForAttendance = useRole == "orgadmin" ? orgId : officeId
 
 
   const columns = [
@@ -101,7 +106,7 @@ const AttendanceList = () => {
   ];
 
   useEffect(() => {
-    dispatch(getAllAttendance())
+    dispatch(getAllAttendance({ officeId, orgId, useRole }))
   }, [])
 
   return (

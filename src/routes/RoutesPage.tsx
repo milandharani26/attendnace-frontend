@@ -5,7 +5,6 @@ import {
   Routes,
 } from "react-router-dom";
 import { getToken, removeUserSession } from "../utility/genricFunctions";
-import { useDispatch, useSelector } from "react-redux";
 import { ReactNode } from "react";
 import Login from "../pages/login/Login";
 import Layout from "../layout/Layout";
@@ -21,6 +20,7 @@ import AttendanceForm from "../pages/attendance/AttendanceForm";
 import Plans from "../pages/plans/Plans";
 import SignUp from "../pages/signup/Signup";
 import AboutProductPage from "../pages/aboutProductPage/AboutProductPage";
+import { useAppDispatch } from "../store/store";
 // import AboutProductPage from "../pages/aboutProductPage/AboutProductPage";
 
 interface RouteProps {
@@ -39,7 +39,7 @@ const PublicRoute: React.FC<RouteProps> = ({ children }) => {
 };
 
 const PrivateRoute: React.FC<RouteProps> = ({ children }) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const token = getToken();
 
   if (token) {

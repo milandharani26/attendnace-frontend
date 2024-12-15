@@ -8,6 +8,7 @@ import CustomTable from "../../components/table/CustomTable";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEmployees, getEmployee } from "../../store/builders/employee/employee.builder";
 import { checkPermission } from "../../utility/genricFunctions";
+import { useAppDispatch } from "../../store/store";
 
 const breadCrumbsArr = [
   {
@@ -35,7 +36,7 @@ const columns = [
 
 const EmployeeList = () => {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const employeeTableData = useSelector(store => store?.employee?.employeeTableData)
   const useRole = useSelector(store => store?.auth?.user?.userRole?.role_name)
   const orgId = useSelector(store => store?.auth?.user?.user?.org_id)

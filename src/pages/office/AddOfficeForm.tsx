@@ -10,6 +10,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createOffice, editOfficeById, updateOfficeById } from "../../store/builders/office/office.builder";
 import { formatDateToYYYYMMDD } from "../../utility/genricFunctions";
+import { useAppDispatch } from "../../store/store";
 
 const breadCrumbsArr = [
   {
@@ -33,7 +34,7 @@ const breadCrumbsArr = [
 const AddOfficeForm = () => {
 
   const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const { id } = useParams()
   const editOfficeData = useSelector((store) => store?.office?.formEditId)
   const orgId = useSelector((store) => store?.auth?.user?.user?.org_id)

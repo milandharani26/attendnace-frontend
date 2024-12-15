@@ -9,6 +9,10 @@ interface LoginParams {
   navigate: (path: string) => void; // Type for navigate function
 }
 
+interface LogoutParams {
+  userId: string;
+}
+
 interface LoginResponse {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any; // Define the shape of your response data if you have a specific type
@@ -66,6 +70,35 @@ export const login = createAsyncThunk(
       const userData = { user: response.data.user, userRole, employee: response.data.employeeData }
 
       return userData;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      const errorMessage = error?.response?.data?.message || 'An error occurred';
+
+      toast.error(errorMessage, {
+        // className: 'custom-toast-error',
+        progressStyle: { background: '#C53C43' },
+      });
+    }
+  }
+);
+
+
+export const logout = createAsyncThunk(
+  'auth/logout',
+  async ({ userId }: LogoutParams) => {
+
+
+    try {
+      const response = await apiClient.post('auth/logout', { userId });
+
+      if (response.status === 200) {
+
+        toast.success("Successfully login", {
+          // className: 'custom-toast-success',
+          progressStyle: { background: '#ffffff' },
+        })
+      }
+
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       const errorMessage = error?.response?.data?.message || 'An error occurred';

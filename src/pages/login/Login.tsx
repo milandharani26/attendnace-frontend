@@ -1,20 +1,20 @@
-import { Box, Button, CardActions, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { Form, Formik } from 'formik'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import * as Yup from 'yup';
 import Input from '../../components/input/Input';
 import './login.scss'
 import ButtonCustom from '../../components/button/Button';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import AppLogo from "../../assets/icons/Biometric Attendance (1).png"
 import AppLogo from "../../assets/icons/Biometric Attendance (2).png"
-import { useDispatch } from 'react-redux';
 import { login } from '../../store/builders/auth/auth.builder';
+import { useAppDispatch } from '../../store/store';
 
 
 function Login() {
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
   const [initialValues, setInitialValues] = useState({
@@ -40,7 +40,8 @@ function Login() {
     <Box className="login-container">
 
       <Box className="login-left">
-        <Typography variant="h4">Login image</Typography>
+        {/* <Typography variant="h4">Login image</Typography> */}
+        <img src={AppLogo} alt="appLogo" />
       </Box>
 
       <Formik

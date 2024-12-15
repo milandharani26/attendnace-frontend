@@ -6,16 +6,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllAttendance, getTodayAttendanceCount } from '../../store/builders/attendance/attendance.builder';
 import DCard from '../../components/dashboard-card/Card';
 import { getAllEmployeesCount } from '../../store/builders/employee/employee.builder';
+import { useAppDispatch } from '../../store/store';
 
 const Dashboard = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const attendanceTableData = useSelector(store => store?.attendance?.attendanceTableData)
   const todaysAttendanceCount = useSelector(store => store?.attendance?.todayAttendanceCount)
   const allEmployeesCount = useSelector(store => store?.employee?.allEmployeeCount)
   const orgId = useSelector(store => store?.auth?.user?.user?.org_id)
+  const officeId = useSelector(store => store?.auth?.user?.user?.office_id)
+  const useRole = useSelector(store => store?.auth?.user?.userRole?.role_name)
 
   useEffect(() => {
-    dispatch(getAllAttendance())
+    dispatch(getAllAttendance({ officeId, orgId, useRole }))
     dispatch(getTodayAttendanceCount())
     dispatch(getAllEmployeesCount({ orgId }))
   }, [])

@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllOffices } from '../../store/builders/office/office.builder';
 import CustomTable from '../../components/table/CustomTable';
 import { checkPermission } from '../../utility/genricFunctions';
+import { useAppDispatch } from '../../store/store';
 
 
 const breadCrumbsArr = [
@@ -27,7 +28,7 @@ const breadCrumbsArr = [
 
 const OfficeList = () => {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const officeTableData = useSelector((store) => store?.office?.officeTableData)
   const useRole = useSelector(store => store?.auth?.user?.userRole?.role_name)
   const orgId = useSelector(store => store?.auth?.user?.user?.org_id)
